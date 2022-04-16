@@ -1,0 +1,48 @@
+.container {
+  padding: 1.9rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 1.6rem 0;
+}
+
+.rowOne {
+  display: flex;
+  justify-content: space-between;
+  line-height: 2.6rem;
+  padding-bottom: 1.5rem;
+}
+
+.rowOne p:nth-child(2) {
+  color: var(--link-color);
+}
+
+.rowOneColOne {
+  display: flex;
+}
+
+.flightInfoImage {
+  display: flex;
+}
+
+.rowTwo {
+  display: flex;
+  line-height: 2.6rem;
+  justify-content: space-between;
+}
+
+.rowTwo p:nth-child(2) {
+  color: var(--link-color);
+}
+.rowOne > p {
+  color: #000 !important;
+  flex-basis: 2;
+}
+
+.flightInfoImage {
+  align-self: flex-start;
+  padding-right: 2.2rem;
+}
+@media only screen and (max-width: 28em) {
+}

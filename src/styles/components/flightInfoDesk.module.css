@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  font-size: 1.6rem;
+  justify-content: space-evenly;
+  line-height: 2.5rem;
+  background-color: var(--secondary-bg);
+  margin: 5rem 1rem;
+  width: 87rem;
+  border-radius: 0.6rem;
+  padding: 2.5rem;
+}
+.flightInfoCol {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+.flightInfoName p:nth-child(2) {
+  color: var(--link-color);
+}
+.flightInfoRow {
+  display: flex;
+  flex: 1;
+
+  flex-direction: column;
+  align-items: flex-end;
+}
+.flightInfoRow p:nth-child(2) {
+  color: var(--link-color);
+}

@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  padding-bottom: 2rem;
+}
+.flightImg {
+  padding: 1rem;
+}
+
+.flightDetail {
+  background-color: var(--secondary-bg);
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flightDetailInfo {
+  padding-bottom: 1.4rem;
+}
+
+.flightDetailInfo > h5 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.flightDetailInfo > p {
+  color: var(--btn-color);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+.flightDetailTiming > p {
+  line-height: 2.2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.flightDetailTiming p:nth-child(3) {
+  color: var(--btn-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.charges {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 3rem 2.6rem 7rem 2.6rem;
+}
+
+.chargesRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0.4rem 3rem;
+}
+
+.container > button {
+  padding: 1.2rem 2rem;
+  background-color: var(--btn-color);
+  color: white;
+  border-style: none;
+  font-size: 1.68rem;
+  border-radius: 4px;
+  position: absolute;
+  right: 7%;
+  bottom: 6%;
+}
+@media only screen and (max-width: 28em) {
+}

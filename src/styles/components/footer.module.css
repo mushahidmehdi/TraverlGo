@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+.container > p {
+  padding: 2.5rem;
+  color: var(--link-color);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+.horizontalLine {
+  height: 1px;
+  width: 22rem;
+  border-radius: 0px;
+  color: #c2d1d9;
+  background-color: #c2d1d9;
+  margin: 3rem 0;
+}
+
+.navigation li {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+  margin: 4rem 0;
+  color: #505d68;
+}
+.navigation {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 26em) {
+}
