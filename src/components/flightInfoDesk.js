@@ -4,9 +4,9 @@ import styles from "../styles/components/flightInfoDesk.module.css";
 import flight from "../../public/assests/Icons/jet-fighter-solid-01.png";
 import flight1 from "../../public/assests/Icons/plane-circle-check-solid-01.png";
 
-const FlightInfoDesk = ({ index = 2 }) => {
+const FlightInfoDesk = ({ index, item, setBooking }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} onClick={() => setBooking(item)}>
       <div className={styles.flightInfoCol}>
         <div className={styles.flightInfoImg}>
           {index % 2 === 0 ? (
@@ -29,23 +29,25 @@ const FlightInfoDesk = ({ index = 2 }) => {
         </div>
 
         <div className={styles.flightInfoName}>
-          <p>16h 45m</p>
-          <p>Hawaiian Airlines</p>
+          <p>{item?.duration}</p>
+          <p>{item?.airline}</p>
         </div>
       </div>
 
       <div className={styles.flightInfoRow}>
-        <p> 7:00AM - 4:15PM</p>
+        <p>
+          {item.departure_time} - {item.arrival_time}
+        </p>
       </div>
 
       <div className={styles.flightInfoRow}>
-        <p> 1 Stop</p>
-        <p>2h 45m in HNL</p>
+        <p>{item.stop}</p>
+        <p>{item.stop_detail}</p>
       </div>
 
       <div className={styles.flightInfoRow}>
-        <p>Price</p>
-        <p>Round trip</p>
+        <p>{item.price.total}</p>
+        <p>{item.trip_type}</p>
       </div>
     </section>
   );

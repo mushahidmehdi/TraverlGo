@@ -4,9 +4,9 @@ import styles from "../styles/components/flightInfo.module.css";
 import flight from "../../public/assests/Icons/jet-fighter-solid-01.png";
 import flight1 from "../../public/assests/Icons/plane-circle-check-solid-01.png";
 
-const FlightInfo = ({ index = 2 }) => {
+const FlightInfo = ({ index, item, setBooking }) => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} onClick={() => setBooking(item)}>
       <div className={styles.rowOne}>
         <div className={styles.rowOneColOne}>
           <div className={styles.flightInfoImage}>
@@ -29,20 +29,22 @@ const FlightInfo = ({ index = 2 }) => {
             )}
           </div>
           <div className={styles.flightInfoRow}>
-            <p>16h 45m</p>
-            <p>Hawaiian Airlines</p>
+            <p>{item.duration}</p>
+            <p>{item.airline}</p>
           </div>
         </div>
-        <p>$ Price</p>
+        <p>{item.price.total}</p>
       </div>
       <div className={styles.rowTwo}>
         <div className={styles.flightInfoRow}>
-          <p>7:00AM - 4:15PM</p>
-          <p>2h 45m in HNL</p>
+          <p>
+            {item.departure_time} - {item.arrival_time}
+          </p>
+          <p>{item.stop_detail}</p>
         </div>
         <div className={styles.flightInfoRow}>
-          <p>1 stop</p>
-          <p>Round trip</p>
+          <p>{item.stop}</p>
+          <p>{item.trip_type}</p>
         </div>
       </div>
     </section>

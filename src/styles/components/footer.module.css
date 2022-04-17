@@ -5,7 +5,12 @@
   flex-direction: column;
   background-color: #fff;
 }
-.container > p {
+.firstColumn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.firstColumn > p {
   padding: 2.5rem;
   color: var(--link-color);
   font-size: 1.6rem;
@@ -31,10 +36,117 @@
   text-align: center;
   margin: 4rem 0;
   color: #505d68;
+  text-transform: uppercase;
 }
 .navigation {
-  margin-bottom: 2rem;
+  margin: 5rem 3rem;
+}
+.navigation > p {
+  display: none;
+}
+.thirdColumn {
+  display: none;
+}
+.socialMediaIcons {
+  display: none;
+}
+.horizontalLineEnd {
+  display: none;
 }
 
-@media only screen and (min-width: 26em) {
+@media only screen and (min-width: 32em) {
+  .container {
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .footer {
+    background-color: var(--secondary-bg);
+    padding: 5rem 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-width: 140rem;
+    margin: 4rem auto 0 auto;
+  }
+  .firstColumn {
+    flex: 2.5;
+    align-items: flex-start;
+  }
+  .firstColumn > p {
+    padding: 0 0 0 3rem;
+    font-size: 1.4rem;
+    text-align: left;
+  }
+  .secondColumn {
+    flex: 1;
+  }
+
+  .horizontalLine {
+    height: 28rem;
+    width: 1px;
+    border-radius: 0px;
+    color: #c2d1d9;
+    background-color: #c2d1d9;
+    margin: 1rem 4rem;
+  }
+  .horizontalLine2 {
+    height: 28rem;
+    width: 1px;
+    border-radius: 0px;
+    color: #c2d1d9;
+    background-color: #c2d1d9;
+    margin: 1rem 4rem;
+  }
+  .thirdColumn {
+    display: block;
+    flex: 2.5;
+  }
+  .socialMediaIcons {
+    display: flex;
+    padding: 2rem 0 0 3rem;
+  }
+  .socialMediaIcons > * {
+    margin-inline-end: 2rem;
+  }
+  .navigation > p {
+    display: block;
+    text-align: center;
+    color: #2f383e;
+    font-size: 1.7rem;
+  }
+  .navigation li {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 2rem 0;
+    color: #738392c5;
+  }
+  .thirdColumn {
+    margin: 4.4rem 0 0 4rem;
+  }
+
+  .thirdColumn > span {
+    color: #2f383e;
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  .thirdColumn > p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 1.6rem 0;
+    color: #738392c5;
+  }
+  .horizontalLineEnd {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-radius: 0px;
+
+    background-color: #c2d1d9;
+  }
 }

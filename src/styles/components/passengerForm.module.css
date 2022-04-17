@@ -76,5 +76,12 @@
 .requiredInputFieldOffScreen {
   display: none;
 }
-@media only screen and (max-width: 28em) {
+@media only screen and (min-width: 62em) {
+  .passengerForm {
+    margin: 0 auto;
+  }
+  .container {
+    width: 58rem;
+    border-radius: 12px;
+  }
 }

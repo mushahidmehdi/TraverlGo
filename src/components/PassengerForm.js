@@ -12,7 +12,6 @@ const PassengerForm = () => {
     address: "",
   });
   const { name, surname, email, address } = passengerForm;
-  const userRef = useRef();
 
   const handleOnChange = (e) => {
     setPassengerForm({ ...passengerForm, [e.target.name]: e.target.value });

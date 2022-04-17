@@ -75,5 +75,50 @@
   right: 7%;
   bottom: 6%;
 }
-@media only screen and (max-width: 28em) {
+@media only screen and (min-width: 32em) {
+  .container {
+    max-width: 42rem;
+    margin: 3rem auto;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .container {
+    margin-left: 2rem;
+    min-width: 27rem;
+  }
+
+  .flightDetail {
+    flex: 1;
+  }
+  .flightDetail:hover {
+    cursor: pointer;
+  }
+
+  .charges {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 3rem 2.6rem 7rem 2.6rem;
+  }
+
+  .chargesRow {
+    padding: 0.5rem 0;
+  }
+  .chargesRow > span {
+    margin-inline-end: 4rem;
+  }
+  .container > button {
+    padding: 1.2rem 2rem;
+    background-color: var(--btn-color);
+    color: white;
+    border-style: none;
+    font-size: 1.68rem;
+    border-radius: 4px;
+    position: absolute;
+    right: 7%;
+    bottom: 43%;
+  }
+  .container > button:hover {
+    cursor: pointer;
+  }
 }
