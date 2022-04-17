@@ -9,7 +9,7 @@ import PassengerForm from "../components/PassengerForm";
 export default function Form() {
   const router = useRouter();
   const data = router.query;
-  console.log(data);
+
   return (
     <>
       <Navbar />

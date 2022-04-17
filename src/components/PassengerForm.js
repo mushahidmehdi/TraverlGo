@@ -27,8 +27,8 @@ const PassengerForm = () => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log(name, surname, email, address);
     dispatch(passengerDetail(name, surname, email, address));
+    route.push("/success");
   };
 
   return (
@@ -50,7 +50,7 @@ const PassengerForm = () => {
                 aria-describedby="reqNameFields"
                 onFocus={() => setFocusName(true)}
                 onBlur={() => setFocusName(false)}
-                required=" "
+                required
               />
               <div
                 className={
@@ -78,7 +78,7 @@ const PassengerForm = () => {
                 aria-describedby="reqSurNameFields"
                 onFocus={() => setfocusSurName(true)}
                 onBlur={() => setfocusSurName(false)}
-                required=""
+                required
               />
               <div
                 className={
@@ -106,7 +106,7 @@ const PassengerForm = () => {
                 aria-describedby="reqEmailFields"
                 onFocus={() => setFocusEmail(true)}
                 onBlur={() => setFocusEmail(false)}
-                required=""
+                required
               />
             </div>
             <div
@@ -135,9 +135,7 @@ const PassengerForm = () => {
               />
             </div>
 
-            <button type="submit" onClick={() => route.push("/success")}>
-              Submit
-            </button>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </section>
