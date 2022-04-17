@@ -1,11 +1,15 @@
 import styles from "../styles/form.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import plane from "../../public/assests/Icons/plane.png";
 
 import { Navbar, Footer, FlightDetail } from "../components";
 import PassengerForm from "../components/PassengerForm";
 
 export default function Form() {
+  const router = useRouter();
+  const data = router.query;
+  console.log(data);
   return (
     <>
       <Navbar />
@@ -18,7 +22,7 @@ export default function Form() {
             <PassengerForm />
           </div>
           <div>
-            <FlightDetail />
+            <FlightDetail booking={data} btn="none" />
           </div>
         </div>
         <div className={styles.planeImg}>

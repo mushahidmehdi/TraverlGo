@@ -56,6 +56,9 @@
 
   margin-top: 0.8rem;
 }
+.container > form > button {
+  cursor: pointer;
+}
 
 .requiredInputField {
   display: block;
@@ -75,6 +78,15 @@
 
 .requiredInputFieldOffScreen {
   display: none;
+}
+@media only screen and (min-width: 32em) {
+  .passengerForm {
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+  .container {
+    border-radius: 12px;
+  }
 }
 @media only screen and (min-width: 62em) {
   .passengerForm {

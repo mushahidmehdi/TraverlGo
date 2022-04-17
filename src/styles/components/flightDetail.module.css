@@ -87,12 +87,11 @@
     margin-left: 2rem;
     min-width: 27rem;
   }
-
-  .flightDetail {
-    flex: 1;
-  }
   .flightDetail:hover {
     cursor: pointer;
+  }
+  .flightDetail {
+    flex: 1;
   }
 
   .charges {

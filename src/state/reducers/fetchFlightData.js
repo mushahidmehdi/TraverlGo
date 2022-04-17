@@ -1,7 +1,8 @@
-import { FETCHFLIGHTDATA } from "../types";
+import { FETCHFLIGHTDATA, POSTUSERDATA } from "../types";
 
 const initialState = {
   flightList: [],
+  data: "",
 };
 
 export const flightDataReducer = (state = initialState, action) => {
@@ -13,6 +14,12 @@ export const flightDataReducer = (state = initialState, action) => {
         ...state,
         flightList: payload,
       };
+    case POSTUSERDATA:
+      return {
+        ...state,
+        data: payload,
+      };
+
     default:
       return state;
   }

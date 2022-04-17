@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
+
+import { useSelector, useDispatch } from "react-redux";
+
 import styles from "../styles/components/flightInfoDesk.module.css";
 import flight from "../../public/assests/Icons/jet-fighter-solid-01.png";
 import flight1 from "../../public/assests/Icons/plane-circle-check-solid-01.png";

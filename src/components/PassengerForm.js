@@ -1,7 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { useRouter } from "next/router";
+
 import styles from "../styles/components/passengerForm.module.css";
+import { passengerDetail } from "../state/actions";
 
 const PassengerForm = () => {
+  const dispatch = useDispatch();
+  const route = useRouter();
+
   const [focusName, setFocusName] = useState(false);
   const [focusSurName, setfocusSurName] = useState(false);
   const [focusEmail, setFocusEmail] = useState(false);
@@ -20,7 +28,7 @@ const PassengerForm = () => {
   const submit = (e) => {
     e.preventDefault();
     console.log(name, surname, email, address);
-    // dispatch(signup(name, surname, email, address));
+    dispatch(passengerDetail(name, surname, email, address));
   };
 
   return (
@@ -127,7 +135,9 @@ const PassengerForm = () => {
               />
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={() => route.push("/success")}>
+              Submit
+            </button>
           </form>
         </div>
       </section>

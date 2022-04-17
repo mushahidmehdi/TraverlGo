@@ -1,13 +1,15 @@
 import styles from "../styles/success.module.css";
 import Image from "next/image";
 
-import Luggage from "../../public/assests/Icons/Luggage.png";
-import worldMap from "../../public/assests/Icons/worldMap.png";
-
-import { Navbar, Footer } from "../components";
+import { useSelector } from "react-redux";
 import { X } from "react-feather";
 
+import { Navbar, Footer } from "../components";
+import Luggage from "../../public/assests/Icons/Luggage.png";
+
 export default function Fail() {
+  const data = useSelector((state) => state);
+
   return (
     <>
       <Navbar />
